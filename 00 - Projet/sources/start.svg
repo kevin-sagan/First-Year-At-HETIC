@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="15" viewBox="0 0 12 15">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="12" height="15" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Play_Black" data-name="Play Black" clip-path="url(#clip-path)">
+    <path id="Play" d="M0,15V0L12,7.5Z" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>
