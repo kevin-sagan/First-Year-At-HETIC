@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page panier</title>
+    <link rel="stylesheet" href="css/stylepanier.css">
+    <link rel="stylesheet" href="css/responsivepanier.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="container">
+        <header>
+        
+            <div class="topnav" id="myTopnav">
+                <a href="index.html" class="active"><img src="img/logo.svg" alt=""></a>
+                <a href="#">Catégories</a>
+                <a href="#">Guides</a>
+                <a href="#">Blog</a>
+                <a href="#">Nos boutiques</a>
+
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">     
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="icons">
+                    <a href="#"><img src="img/login.svg" alt="Login"></a>
+                </div>
+
+                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black" id="shoppingBasket"><img src="img/basket.svg" alt="Panier"></button>
+                <div id="id01" class="w3-modal">
+                    <div class="w3-modal-content w3-card-4">
+                      <header class="w3-container w3-teal"> 
+                        <span onclick="document.getElementById('id01').style.display='none'" 
+                        class="w3-button w3-display-topright">&times;</span>
+                        <h2>Modale panier</h2>
+                      </header>
+                        <div class="w3-container">
+                            <div class="ricinDiv">
+                                <section class="whiteBackground">
+                                    <img src="img/ricin.svg">
+                                    <div class="feedbackSuggest"><img src="img/fivestars.svg"><span>89 Avis</span></div>
+                                    <p class="products">Huile de Ricin - 500 ml</p>
+                                    <p class="prices">11,90€</p>
+                                </section>
+                            </div>
+                        </div>
+                        <footer class="w3-container w3-teal">
+                            <button class="modalPayout">Payer</button>
+                        </footer>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+        </header>
+
+        <section>
+            <div class="breadcrumb">
+                <a href="index.html">Accueil</a>
+                <span>></span>
+                <a href="panier.html">Page panier</a>
+            </div>
+        </section>
+        
+        <!-- Produit  -->
+        <section class="productPresentation">
+            <div>
+                <h1>Huile de ricin</h1>
+                    <div class="feedbackProduct">
+                        <img src="img/fivestars.svg">
+                        <span>89 Avis</span></div>
+
+                <img id="ricinPic" src="img/ricin.svg" alt="Huile de Ricin">
+            </div>
+        </section>
+
+        <section class="highresPresentation">
+            <section class="highresPics">
+                <img id="ricinOil" src="img/ricin.svg">
+                <div class="ricinPics">
+                    <img onclick="change_imgMini(this)" src="img/ricinFirstPic.svg">
+                    <img onclick="change_imgMini(this)" src="img/ricinSecondPic.svg">
+                    <img onclick="change_imgMini(this)" src="img/ricinThirdPic.svg">
+                </div>
+            </section>
+
+            <section>
+                <div class="highresDetails">
+                    <h1>Huile de ricin</h1>
+                    <div class="availability">
+                        <p>Disponibilité : <span class="stock">En stock</span></p>
+                    </div>
+
+                    <div class="feedbackProduct">
+                        <img src="img/fivestars.svg">
+                        <span>89 Avis</span></div>
+
+                    <p class="priceTag">5,99€</p>
+                </div>
+
+                        <!-- Choix -->
+                <section class="hrchoix">
+                    <div class="taille">
+                        <form action="#">
+                            <label for="taille">Taille</label><br class="lineBreak">
+                            <select name="taille" class="tailles">
+                                <option value="1">500 ml</option>
+                                <option value="2">1 L</option>
+                            </select>
+                        </form>
+                    </div>
+
+                    <div class="hrquantite"> 
+                        <form action="#">
+                            <label for="quantite">Quantité</label><br class="lineBreak">
+                            <select name="quantite" class="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </form>
+                    </div>
+                </section>
+
+                <button class="hraddBasket">Ajouter au panier</button>
+                <button class="hrfastBuy">Achat express</button>
+            </section>
+        </section>
+
+        <!-- Plus de photos -->
+        <section class="morePics">
+            <img onclick="change_img(this)" class="firstPic" src="img/ricinFirstPic.svg" alt="">
+            <img onclick="change_img(this)" src="img/ricinSecondPic.svg" alt="">
+            <img onclick="change_img(this)" class="thirdPic" src="img/ricinThirdPic.svg" alt="">
+        </section>
+    
+        <!-- Info & Prix -->
+        <section class="price">
+            <p>Disponibilité : <span class="stock">En stock</span></p>
+            <p class="price">11,90 €</p>
+        </section>
+
+        <!-- Choix -->
+        <section class="choix">
+            <div class="taille">
+                <form action="#">
+                    <label for="taille">Taille</label><br class="lineBreak">
+                    <select name="taille" class="tailles">
+                        <option value="1">500 ml</option>
+                        <option value="2">1 L</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="quantite"> 
+                <form action="#">
+                    <label for="quantite">Quantité</label><br class="lineBreak">
+                    <select name="quantite" class="quantity">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </form>
+            </div>
+        </section>
+
+        <!-- Achat -->
+        <div class="buy">
+            <button class="addBasket">Ajouter au panier</button>
+            <button class="fastBuy">Achat express</button>
+        </div>
+
+        <!-- Détails -->
+        <div class="blocText">
+        <section class="details">
+            <h2>Description</h2>
+            <article>L'huile de ricin est une huile végétale non-alimentaire, appelée de façon impropre « huile de castor ». Elle est obtenue à partir des graines de ricin. Elle est incolore à jaune très clair.</article>
+        </section>
+
+        <section class="details">
+            <h2>Condition d'utilisation</h2>
+            <article>Appliquez directement sur votre cuir chevelu en massant de la racine du cheveux aux pointes. Laissez agir minimum 20 minutes (si l'huile est utilisée pure), sinon 2 heures d'application.</article>
+        </section>
+
+        <section class="details">
+            <h2>Précautions</h2>
+            <article>L’huile de coco doit ici être utilisée à bonne dose et non pas tous les jours. En effet, étant extrêmement grasse, elle risque de bloquer les pores de la peau et de provoquer des points noirs. Les personnes ayant une peau sujettes à l’acné devront donc éviter d’en mettre trop souvent (d’ailleurs, elles devront éviter toute huile végétale, pas seulement l’huile de coco).</article>
+        </section>
+        </div>
+        <!-- Suggestion d'achat -->
+        <!-- LOW RESOLUTION -->
+        <section class="suggest">
+            <h3>Produits fréquemments achetés ensemble</h3>
+            <div>
+                <img src="img/palme.svg" alt="Huile de Palme">
+            </div>
+
+            <div class="feedbackSuggest">
+                <img src="img/fourstars.svg"><span>34 Avis</span>
+            </div>
+
+            <div class="palm">
+                <p>Huile de palme</p>
+                <p>250 ml</p>
+                <p class="pricePalm">9,55€</p>
+            </div>
+            
+            <p class="textPrice">Prix total <span class="price">21,45€</span></p>
+
+            <div class="addBothDiv">
+                <button class="addBoth">Ajouter les deux articles au panier</button>
+            </div>
+        </section>
+
+        <!-- HIGH RESOLUTION -->
+        <h3 class="displayNone">Produits fréquemments achetés ensemble</h3>
+        <section class="highSuggest">
+            <div class="ricinDiv">
+                <section class="whiteBackground">
+                    <img src="img/ricin.svg">
+                    <div class="feedbackSuggest"><img src="img/fivestars.svg"><span>89 Avis</span></div>
+                    <p class="products">Huile de Ricin - 500 ml</p>
+                    <p class="prices">11,90€</p>
+                    <button class="addToBasket">Ajouter au panier</button>
+                </section>
+            </div>
+
+            <div class="palmDiv">
+                <section class="whiteBackground">
+                    <img src="img/palme.svg">
+                    <div class="feedbackSuggest"><img src="img/fivestars.svg"><span>89 Avis</span></div>
+                    <p class="products">Huile de Palme - 125 ml</p>
+                    <p class="prices">9,55€</p>
+                    <button class="addToBasket">Ajouter au panier</button>
+                </section>
+            </div>
+
+            <div class="productPrice">
+                <p>Prix total <span>21,45€</span></p>
+                <button class="addBoth">Ajouter les deux articles au panier</button>
+            </div>
+
+        </section>
+        
+
+        <h3>Recettes de cosmétiques maison</h3>
+        <section class="cosmetic">
+            <div class="scrubDiv">
+                <section class="whiteBackground id="one">
+                    <div class="info">
+                        <img class="whip" src="img/whip.svg">
+                        <img class="euro" src="img/euro.svg">
+                    </div>
+
+                    <img class="scrub" src="img/scrub.svg">
+                    <p>Scrub pour les lèvres</p>
+                    <a href="#">Voir la recette ></a>
+                </section>
+
+                <section class="whiteBackground" id="two">
+                    <div class="info">
+                        <img class="whip" src="img/whip.svg">
+                        <img class="euro" src="img/euro.svg">
+                    </div>
+
+                    <img class="scrub" src="img/savonRocher.svg">
+                    <p>Savon Rocher Coco</p>
+                    <a href="#">Voir la recette ></a>
+                </section>
+
+                <section class="whiteBackground" id="three">
+                    <div class="info">
+                        <img class="whip" src="img/whip.svg">
+                        <img class="euro" src="img/euro.svg">
+                    </div>
+
+                    <img class="scrub" src="img/cocoNuts.svg">
+                    <p>CocoNuts : scrub pour le corps</p>
+                    <a href="#">Voir la recette ></a>
+                </section>
+
+                <section class="whiteBackground" id="four">
+                    <div class="info">
+                        <img class="whip" src="img/whip.svg">
+                        <img class="euro" src="img/euro.svg">
+                    </div>
+
+                    <img class="scrub" src="img/oilHair.svg">
+                    <p>Huile pour cheveux à base de coco</p>
+                    <a href="#">Voir la recette ></a>
+                </section>
+            </section>
+            </div>
+        </section>
+
+        <!-- Avis -->
+        <section class="feedbackReview">
+            <p>89 Avis</p>
+            
+            <div class="fiveStarsDiv">
+                <span>5</span><div class="fiveStars"><div class="rating"></div></div>
+            </div>
+
+            <div class="fourStarsDiv">
+                <span>4</span><div class="fourStars"><div class="rating"></div></div>
+            </div>  
+
+            <div class="threeStarsDiv">
+                <span>3</span><div class="threeStars"><div class="rating"></div></div>
+            </div>  
+
+            <div class="twoStarsDiv">
+                <span>2</span><div class="twoStars"><div class="rating"></div></div>
+            </div>  
+
+            <div class="oneStarDiv">
+                <span>1</span><div class="oneStar"><div class="rating"></div></div>
+            </div>  
+
+            <button class="writeComment">Ecrire un commentaire</button>
+        </section>
+
+        <!-- RATING FILTER BUTTON -->
+        <section>
+            <div class="utilite">
+            <form action="#">
+                <select name="utilite" class="utilite">
+                    <option value="2">Plus pertinente</option>
+                    <option value="1">Meilleure note</option>
+                    <option value="2">Pire note</option>
+                </select>
+            </form>
+        </div>
+        </section>
+
+        <!-- Commentaires -->
+        <section class="comments">
+            <div>
+                <div class="firstReview">
+                    <img src="img/fivestarsrating.svg">
+                    <div class="identityReview">
+                        <p>27 Nov. 2019</p>
+                        <p>John G.</p>
+                    </div>
+                </div>
+                <p>Cette huile est très bien pour ma peau : elle nourrit, adoucit et apaise les sensations de tiraillements. Par contre, elle rend mes cheveux un peu ternes. Par ailleurs, je suis à la recherche de produits faciles et pratiques à utiliser en toutes circonstances et  n’importe où lors de voyages.</p>
+                <p>Utile ?   32 Oui   |    3 Non</p>
+            </div>
+            
+            <div>
+            <div class="secondReview">
+                <img src="img/fivestarsrating.svg">
+                <div class="identityReview2">
+                        <p>27 Nov. 2019</p>
+                        <p>Said F.</p>
+                </div>
+            </div>
+                <p>Huile parfaite pour les cheveux bouclés, cassants et secs. Je l'utilise en masque, simplement. Je pose une base lavante avec quelques gouttes d'ylang ylang et mes cheveux sont doux et brillants. Une vraie pub pour les produits naturels!</p>
+                <p>Utile ?   27 Oui   |    1 Non</p>
+            </div>
+        </section>
+
+    
+    <footer>
+        <section class="lowRes">
+            <div class="details">
+                <h2>Notre identité </h2>
+                    <p>Qui sommes nous ?</p>
+                    <p>La satisfaction de nos clients</p>
+                    <p>Distributeurs</p>
+                    <p>Mentions</p>
+                    <p>Dans la presse</p>
+                    <p>Recrutement</p>
+            </div>
+
+            <div class="details">
+                <h2>Nos engagements </h2>
+                    <p>Qualité et responsabilité</p>
+                    <p>Des prix justes</p>
+                    <p>Frais de port</p>
+                    <p>Satisfait ou remboursé</p>
+                    <p>Paiement sécurisé</p>
+                    <p>Conditions générales de vente</p>
+                    <p>Charte de données personnelles</p>
+            </div>
+
+            <div class="details">
+                <h2>Nos services </h2>
+                    <p>Documentations</p>
+                    <p>Contactez-nous</p>
+                    <p>Service client</p>
+                    <p>Programme fidélité</p>
+                    <p>Parrainez vos proches</p>
+                    <p>Commande "coup de "cœeur"</p>
+                    <p>Téléchargez notre catalogue</p>
+                    <p>Questions fréquemment posées</p>
+            </div>
+
+            <p class="license">2019 © AROMA ZONE. Tous droits réservés.</p>
+        </section>
+
+        <section class="highRes">
+                <div class="ourIdentity">
+                    <h3>Notre identité </h3>
+                    <ul>
+                        <li><a href="#">Qui sommes nous ?</li></a>
+                        <li><a href="#">La satisfaction de nos clients</li></a>
+                        <li><a href="#">Distributeurs</li></a>
+                        <li><a href="#">Mentions</li></a>
+                        <li><a href="#">Dans la presse</li></a>
+                        <li><a href="#">Recrutement</li></a>
+                    </ul>
+                </div>
+
+                <div class="ourEngagments">
+                    <h3>Nos engagements </h3>
+                    <ul>
+                    <li><a href="#">Qualité et responsabilité</li></a>
+                    <li><a href="#">Des prix justes</li></a>
+                    <li><a href="#">Frais de port</li></a>
+                    <li><a href="#">Satisfait ou remboursé</li></a>
+                    <li><a href="#">Paiement sécurisé</li></a>
+                    <li><a href="#">Conditions générales de vente</li></a>
+                    <li><a href="#">Charte de données personnelles</li></a>
+                    </ul>
+                </div>
+                
+                <div class="ourServices">
+                    <h3>Nos services </h3>
+                    <ul>
+                        <li><a href="#">Documentations</li></a>
+                        <li><a href="#">Contactez-nous</li></a>
+                        <li><a href="#">Service client</li></a>
+                        <li><a href="#">Programme fidélité</li></a>
+                        <li><a href="#">Parrainez vos proches</li></a>
+                        <li><a href="#">Commande "coup de "cœeur"</li></a>
+                        <li><a href="#">Téléchargez notre catalogue</li></a>
+                        <li><a href="#">Questions fréquemment posées</li></a>
+                    </ul>
+                </div class="ourServices">
+        </section>
+    </footer>
+    
+<script src="./js/script.js"></script>
+<script type="text/javascript">
+
+    function change_img(image){
+        document.getElementById('ricinPic').src = image.src;
+    }
+
+    function change_imgMini(image){
+        document.getElementById('ricinOil').src = image.src;
+    }
+    
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+    
+
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+        x.className = "topnav";
+        }
+    }
+</script>
+
+</body>
+</html>

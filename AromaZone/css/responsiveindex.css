@@ -1,0 +1,23 @@
+@media screen and (max-width: 615px) {
+    #one{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 675px) {
+    #two{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    #three{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1345px) {
+    #four{
+      display: none;
+    }
+  }
